@@ -2,20 +2,20 @@ version: '3.9'
 
 services:
   php:
-    container_name: php8.2-fpm
+    container_name: croppa-php8.2-fpm
     build:
       context: ./docker/php
     ports:
       - '9000:9000'
     volumes:
-      - ./src:/var/www/html/rickandmorty
+      - ./src:/var/www/html/croppa
   web:
-    container_name: nginx
+    container_name: croppa-nginx
     image: nginx:stable-alpine
     ports:
       - '8080:80'
     volumes:
-      - ./src:/var/www/html/rickandmorty
+      - ./src:/var/www/html/croppa
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
