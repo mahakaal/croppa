@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   php:
-    container_name: croppa-php8.2-fpm
+    container_name: croppa-php
     build:
       context: ./docker/php
     ports:
@@ -17,5 +17,13 @@ services:
     volumes:
       - ./src:/var/www/html/croppa
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+  composer_installation:
+    container_name: composer_installation
+    image: composer
+    volumes:
+      - ./src:/app
+    command: composer install
     depends_on:
       - php

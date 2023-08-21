@@ -1,7 +1,5 @@
 FROM php:8.2-fpm
 
-RUN apk add --no-cache bash;
-
 RUN apt update \
     && apt install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip imagemagick libmagickwand-dev --no-install-recommends \
     && docker-php-ext-install intl opcache pdo pdo_mysql \
