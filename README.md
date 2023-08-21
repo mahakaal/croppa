@@ -1,3 +1,39 @@
+# Usage
+
+Create docker container with:
+```bash
+docker compose up -d --build
+```
+
+Add `127.0.0.1       croppa.local` to your hosts file and head to http://croppa.local:8080 from your browser, you'll be served from the frontend.
+
+![Frontend Screenshot](frontend-screen.png)
+
+# Test
+
+Run the following command from php container to execute the tests
+```bash
+./vendor/bin/pest
+```
+
+# Structure
+```
+/
+|- docker         -> contains docker configuration for php and nginx
+|- src            -> actual code
+   |- app         -> implementation & logic
+      |- Service
+      |- View
+   |- logs        -> eventual error logs
+   |- public      -> frontend code
+      |- css
+      |- img
+      |- js
+
+```
+
+---
+
 # Introduction
 
 
