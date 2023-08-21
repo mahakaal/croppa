@@ -1,0 +1,46 @@
+.container {
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    background-color: #efefef;
+}
+
+.header {
+    text-align: center;
+}
+
+h1 {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.box > .element {
+    text-align: center;
+    max-width: 33%;
+    max-height: 50vh;
+}
+
+.element > h2.heading {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element > .frame {
+    max-height: 100%;
+    overflow: scroll;
+}
+
+p, label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+input {
+    margin: 0.4rem;
+}
