@@ -1,0 +1,32 @@
+{
+  "name": "mahakaal/croppa",
+  "description": "A simple POC for app/Service which will serve images with cropping/resizing feature. You must own rights on the pictures.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sukhdev Mohan",
+      "email": "sukhdev.mohan@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Croppa\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "ext-imagick": "3.7.0"
+  },
+  "config": {
+    "platform":{
+      "ext-imagick": "3.7.0"
+    },
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.15"
+  }
+}
